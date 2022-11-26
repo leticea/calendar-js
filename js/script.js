@@ -14,10 +14,18 @@ document.addEventListener('DOMContentLoaded', function() {
         for(let i = -firstDayOfWeek, index = 0; i < (42-firstDayOfWeek); i++, index++) {
 
             let date = new Date(year, month, i);
+            let nowDate = new Date();
             let dayTable = tableDays.getElementsByTagName('td')[index];
+
             dayTable.classList.remove('prev-month');
             dayTable.classList.remove('next-month');
+            dayTable.classList.remove('current-day');
             dayTable.innerHTML = date.getDate();
+
+            if (date.getFullYear() == nowDate.getFullYear() && date.getMonth() == nowDate.getMonth() && date.getDate() == nowDate.getDate()) {
+
+                dayTable.classList.add('current-day');
+            }
 
             if (i < 1) {
 
@@ -49,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     prevButton.onclick = function() {
-        month--;
+        month--;        
         if (month < 0) {
             month = 11;
             year--;
