@@ -38,9 +38,10 @@ h2 {
     margin-top: -16px;
     border: 2px solid #cbd1d2;
     border-radius: 50%;
-    color: #cbd1d2;
+    color: black;
     font-size: 16px;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .btn-prev {

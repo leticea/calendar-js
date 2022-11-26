@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 dayTable.classList.add('current-day');
             }
-
+            
             if (i < 1) {
 
                 dayTable.classList.add('prev-month');
