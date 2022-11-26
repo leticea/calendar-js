@@ -13,7 +13,6 @@ body {
     margin: 0 0 0 -250px;
     position: absolute;
     width: 500px;
-    background: red;
 }
 
 .calendar {
@@ -63,8 +62,14 @@ h2 {
 }
 
 .calendar thead {
+    background: #fff;
     font-weight: 600;
     text-transform: uppercase;
 }
 
-
+.calendar td {
+    border: 1px solid #cbd1d2;
+    height: 71.4px;
+    text-align: center;
+    width: 71.4px;
+}
