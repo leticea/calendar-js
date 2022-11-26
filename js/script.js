@@ -41,11 +41,19 @@ document.addEventListener('DOMContentLoaded', function() {
 
     nextButton.onclick = function() {
         month++;
+        if (month > 11) {
+            month = 0;
+            year++;
+        }
         getDaysCalendar(month, year);      
     }
 
     prevButton.onclick = function() {
         month--;
+        if (month < 0) {
+            month = 11;
+            year--;
+        }
         getDaysCalendar(month, year);
     }
 });
