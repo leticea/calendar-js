@@ -56,3 +56,15 @@ h2 {
     background: #cbd1d2;
     color: #f9f9f9;
 }
+
+.calendar table {
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+.calendar thead {
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+
