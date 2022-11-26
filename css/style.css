@@ -16,3 +16,17 @@ h2 {
     font-size: 32px;
     text-transform: uppercase;
 }
+
+.btn-prev, .btn-next {
+    position: absolute;
+    top: 50%;
+    height: 32px;
+    width: 32px;
+    line-height: 32px;
+    margin-top: -16px;
+    border: 2px solid #cbd1d2;
+    border-radius: 50%;
+    color: #cbd1d2;
+    font-size: 16px;
+    font-weight: bold;
+}
