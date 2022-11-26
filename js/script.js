@@ -10,8 +10,10 @@ document.addEventListener('DOMContentLoaded', function() {
         let firstDayOfWeek = new Date(year, month, 1).getDay()-1;
         let getLastDayThisMonth = new Date(year, month+1, 0).getDate();
 
-        for(let i = -firstDayOfWeek; i < (42-firstDayOfWeek); i++) {
+        for(let i = -firstDayOfWeek, index = 0; i < (42-firstDayOfWeek); i++, index++) {
             let date = new Date(year, month, i);
+            let dayTable = tableDays.getElementsByTagName('td')[index];
+            dayTable.innerHTML = date.getDate();
         }
     }
     getDaysCalendar(2, 2001);
