@@ -15,6 +15,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
             let date = new Date(year, month, i);
             let dayTable = tableDays.getElementsByTagName('td')[index];
+            dayTable.classList.remove('prev-month');
+            dayTable.classList.remove('next-month');
             dayTable.innerHTML = date.getDate();
 
             if (i < 1) {
@@ -27,5 +29,23 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     }
-    getDaysCalendar(2, 2022);
+
+    let now = new Date();
+    let month = now.getMonth();
+    let year = now.getFullYear();
+
+    getDaysCalendar(month, year);
+
+    const nextButton = document.getElementById('next');
+    const prevButton = document.getElementById('prev');
+
+    nextButton.onclick = function() {
+        month++;
+        getDaysCalendar(month, year);      
+    }
+
+    prevButton.onclick = function() {
+        month--;
+        getDaysCalendar(month, year);
+    }
 });
